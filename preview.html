@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><head><style>
+body{margin:0;font-family:var(--font-sans,system-ui);background:transparent}
+.bar{display:flex;gap:8px;padding:10px 12px;flex-wrap:wrap}
+button{font:600 13px/1 system-ui;padding:8px 14px;border-radius:999px;border:1px solid var(--border,#ddd);background:var(--card,#fff);color:var(--foreground,#123);cursor:pointer}
+button.on{background:#003c4b;color:#fff;border-color:#003c4b}
+iframe{width:100%;height:1150px;border:0;border-radius:12px;background:#fff}
+.h{padding:2px 14px;font:600 12px/1.6 system-ui;color:var(--muted-foreground,#666)}
+</style></head><body>
+<div class="bar" id="b"></div>
+<div class="h" id="cap">talino.ai — first cut · rendered from /opt/data/talino-ai-site</div>
+<iframe id="f"></iframe>
+<script>
+const BASE="http://127.0.0.1:8080/";
+const pages={Home:BASE+"index.html","Pillar · Agentic Finance":BASE+"agentic-finance.html","Pillar · Stablecoins":BASE+"stablecoins.html",Solutions:BASE+"solutions.html",Contact:BASE+"contact.html"};
+const b=document.getElementById("b"),f=document.getElementById("f");
+let i=0;
+for(const k in pages){
+  const btn=document.createElement("button");btn.textContent=k;
+  btn.onclick=()=>{document.querySelectorAll(".bar button").forEach(x=>x.classList.remove("on"));btn.classList.add("on");f.src=pages[k];document.getElementById("cap").textContent="talino.ai — "+k;};
+  b.appendChild(btn); if(i++===0)btn.click();
+}
+</script></body></html>

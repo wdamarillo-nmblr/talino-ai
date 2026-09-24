@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic Finance — Talino.ai</title>
+<meta name="description" content="Financial infrastructure built for AI agents: MCP-ready payment rails, scoped credentials, policy engines, and compliance as code.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23003c4b'/><text x='16' y='22' font-family='sans-serif' font-size='17' font-weight='900' fill='%2300b6de' text-anchor='middle'>T</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">talino<span class="dot">.</span><span class="tld">ai</span><span class="pulse"></span></a>
+    <nav class="main-nav" id="mainNav">
+      <a class="nav-link active" href="agentic-finance.html">Agentic Finance</a>
+      <a class="nav-link" href="stablecoins.html">Stablecoins</a>
+      <a class="nav-link" href="solutions.html">Solutions</a>
+      <a class="nav-link" href="index.html#impact">Impact</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Schedule a demo</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#003c4b" stroke-width="2.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="glow-orb a"></div>
+  <div class="container">
+    <div class="crumbs"><a href="index.html">talino.ai</a> / agentic-finance</div>
+    <span class="eyebrow on-dark">Pillar 01 — Agentic Finance</span>
+    <h1>When your counterparty is an agent, your rails should think.</h1>
+    <p class="lead">Agentic finance means software acts on money — quoting, paying, reconciling, hedging — under human-authored policy. Talino.ai gives enterprises and fintechs the compliant execution layer for that future, live today.</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn btn-cyan">Get agent access <span class="arrow">→</span></a>
+      <a href="#mcp" class="btn btn-ghost-light">See the MCP surface</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The shift</span>
+      <h2>From human-initiated to agent-initiated finance.</h2>
+      <p>Treasury sweeps, procurement payouts, remittance batches, marketplace settlements — work that once needed a person at a dashboard increasingly starts as an intent from an AI agent. The bottleneck is no longer intelligence. It's rails that let software move value legally, safely, and audibly.</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap-card reveal"><div class="num">WHY IT MATTERS</div><h3>Speed without a human queue</h3><p>Settlement that used to wait for business hours and sign-off chains now completes in seconds — inside limits a human set once.</p></div>
+      <div class="cap-card reveal"><div class="num">WHY IT MATTERS</div><h3>Scale beyond headcount</h3><p>A 4-person treasury team can supervise thousands of agent-executed transactions per day with exception-only review.</p></div>
+      <div class="cap-card reveal"><div class="num">WHY IT MATTERS</div><h3>Auditability by default</h3><p>Every agent action carries identity, policy digest, and outcome — replayable for regulators, insurers, and auditors.</p></div>
+      <div class="cap-card reveal"><div class="num">WHY IT MATTERS</div><h3>Compliance, not permission slips</h3><p>MSB-grade controls and GENIUS Act alignment are enforced in the call path, so agents can never exceed what the law allows.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The control model</span>
+      <h2>Agents act. Policy governs. Humans approve what matters.</h2>
+    </div>
+    <div class="feature-row">
+      <div class="copy reveal">
+        <h3>Scoped agent identities</h3>
+        <p>Each agent gets its own credential with hard caps: maximum transaction size, currency and corridor allowlists, velocity limits, and beneficiary classes. Keys are revocable mid-session and never share a human's full privileges.</p>
+        <ul class="checklist">
+          <li><span class="tick">✓</span> Per-agent spend &amp; velocity ceilings</li>
+          <li><span class="tick">✓</span> Corridor, currency and beneficiary allowlists</li>
+          <li><span class="tick">✓</span> One-call revocation with session kill</li>
+        </ul>
+      </div>
+      <div class="viz reveal">
+        <div class="code-panel" style="box-shadow:none">
+          <div class="chead"><span>policy: treasury-07.yaml</span><span>active</span></div>
+<pre><span class="tk">agent</span>: <span class="ts">"treasury-07"</span>
+<span class="tk">max_txn</span>: <span class="tn">50000</span> USD
+<span class="tk">daily_cap</span>: <span class="tn">500000</span> USD
+<span class="tk">corridors</span>: [<span class="ts">"US→PH"</span>, <span class="ts">"US→MX"</span>, <span class="ts">"EU→PH"</span>]
+<span class="tk">rails</span>: [<span class="ts">"stablecoin"</span>, <span class="ts">"instapay"</span>]
+<span class="tk">requires_human_above</span>: <span class="tn">10000</span>  <span class="tc">// per payee/24h</span></pre>
+        </div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="viz reveal">
+        <div class="code-panel" style="box-shadow:none">
+          <div class="chead"><span>audit stream</span><span>signed</span></div>
+<pre><span class="tc"># every call emits an immutable record</span>
+{
+  <span class="tk">"audit_id"</span>: <span class="ts">"tal_9f3c1a…"</span>,
+  <span class="tk">"actor"</span>: <span class="ts">"agent:treasury-07"</span>,
+  <span class="tk">"policy_digest"</span>: <span class="ts">"sha256:41f0…"</span>,
+  <span class="tk">"decision"</span>: <span class="ts">"executed"</span>, <span class="tk">"rail"</span>: <span class="ts">"stablecoin"</span>,
+  <span class="tk">"regulatory"</span>: { <span class="tk">"travel_rule"</span>: <span class="ts">"attached"</span> }
+}</pre>
+        </div>
+      </div>
+      <div class="copy reveal">
+        <h3>Human-in-the-loop, exactly where you want it</h3>
+        <p>Routine flows settle autonomously. Anything crossing a threshold you define — size, new payee, unusual corridor — pauses for a one-tap approval on Slack, email, or your ops console. The agent keeps working; the risky steps wait for a person.</p>
+        <ul class="checklist">
+          <li><span class="tick">✓</span> Exception-only review queues</li>
+          <li><span class="tick">✓</span> One-tap approve / deny from any surface</li>
+          <li><span class="tick">✓</span> Dual-control for high-value settlements</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mcp">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">Developer &amp; agent surface</span>
+        <h2>One integration. Humans use the dashboard. Agents use MCP.</h2>
+        <p class="lead" style="margin-top:14px">Talino exposes its full payment, ledger and compliance capability as REST APIs, webhooks, and a first-class MCP tool-server — so any model or agent framework (Claude, GPT, custom) can discover and call Talino tools under the policy layer above.</p>
+        <ul class="checklist">
+          <li><span class="tick">✓</span> <span class="mono">quote_payment · execute_payment · verify_beneficiary</span></li>
+          <li><span class="tick">✓</span> <span class="mono">reconcile · policy_status · audit_query</span></li>
+          <li><span class="tick">✓</span> Sandboxed corridor simulation before go-live</li>
+          <li><span class="tick">✓</span> Idempotency keys and replay-safe webhooks</li>
+        </ul>
+        <div class="hero-actions" style="margin-top:30px">
+          <a href="contact.html" class="btn btn-primary">Request API keys <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="code-panel reveal">
+        <div class="chead"><span>agent conversation</span><span>mcp · talino</span></div>
+<pre><span class="ts">user&gt;</span> pay the Q3 supplier batch under policy
+<span class="tk">agent&gt;</span> talino.quote_payment(batch, rails=["stablecoin"])
+       <span class="tc">→ 3 routes · best: 0.42% fee · ETA 1.8s</span>
+<span class="tk">agent&gt;</span> talino.execute_payment(route_2, idempotency=q3_88f)
+       <span class="tc">→ 214 / 215 settled ✓</span>
+<span class="tk">agent&gt;</span> talino.policy_status(exc_117)
+       <span class="tc">→ flagged: new payee &gt; threshold —</span>
+<span class="tc">   awaiting human approval (Slack sent)</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Who it&rsquo;s for</span>
+      <h2>Agentic finance, in production today.</h2>
+    </div>
+    <div class="usecase-grid">
+      <article class="usecase reveal"><div class="uc-head">Treasury &amp; Operations</div><div class="uc-body"><p>Autonomous cash sweeps, yield routing, and intraday reconciliation supervised by exception queues instead of spreadsheets.</p><div class="agent-call">agent&gt; sweep idle balances → yield rail before 23:00 UTC</div></div></article>
+      <article class="usecase reveal"><div class="uc-head">Marketplaces &amp; Platforms</div><div class="uc-body"><p>Agents that settle seller payouts, refunds, and revenue splits in real time — embedded in your product via Talino&rsquo;s Payment Hub.</p><div class="agent-call">agent&gt; settle 12,400 seller payouts in 9 minutes</div></div></article>
+      <article class="usecase reveal"><div class="uc-head">Fintech Builders</div><div class="uc-body"><p>Ship wallet, ledger and KYC products on an agent-native core from day one — the stack you'd build in three years, callable in one integration.</p><div class="agent-call">agent&gt; scaffold wallet + micro-ledger in sandbox</div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal"><span class="eyebrow">Questions we get</span><h2>Straight answers on agentic money movement.</h2></div>
+    <div class="accordion reveal">
+      <details><summary>Can an AI agent actually hold or move funds?</summary><div class="a-body">Agents never custody funds. An agent holds a scoped credential; funds move only through Talino&rsquo;s licensed, regulated rails, subject to policy limits and any human-approval gates you configure. The agent initiates — the platform executes and attests.</div></details>
+      <details><summary>What happens if an agent misbehaves or gets prompt-injected?</summary><div class="a-body">Blast radius is capped by design: per-transaction and daily ceilings, beneficiary allowlists, velocity limits, and instant revocation. Anything outside policy doesn't fail silently — it parks in a human review queue with full context.</div></details>
+      <details><summary>Which agent frameworks are supported?</summary><div class="a-body">Any that speak MCP or HTTPS. We publish a reference MCP tool-server and OpenAPI spec, with examples for Claude, GPT-style function calling, and LangChain-style orchestration.</div></details>
+      <details><summary>Is this compliant with US regulation?</summary><div class="a-body">Talino operates as a registered Money Services Business and aligns its stablecoin infrastructure with the principles of the GENIUS Act. Compliance checks (KYC/AML, Travel Rule, sanctions) execute inline on every transaction, agent-initiated or not.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Give your agents a financial license to operate — under your rules.</h2>
+    <p>Book a walkthrough of the agent policy engine, MCP server, and live sandbox corridors.</p>
+    <div class="hero-actions"><a href="contact.html" class="btn btn-cyan">Schedule a demo <span class="arrow">→</span></a><a href="stablecoins.html" class="btn btn-ghost-light">Next pillar: Stablecoins</a></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo">talino<span class="dot">.</span><span class="tld">ai</span></a>
+        <p class="foot-mission">Empowering global citizens with frictionless cross-border money movement — through compliant stablecoin infrastructure and agentic financial rails.</p>
+      </div>
+      <div class="footer-col"><h4>Platform</h4><a href="agentic-finance.html">Agentic Finance</a><a href="stablecoins.html">Stablecoins</a><a href="solutions.html">Solutions</a><a href="index.html#impact">Impact</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="contact.html">Contact</a><a href="contact.html">Schedule a demo</a><a href="privacy.html">Privacy Policy</a></div>
+      <div class="footer-col"><h4>Developers</h4><a href="#mcp">MCP Server</a><a href="#mcp">API Docs</a><a href="#mcp">Sandbox</a></div>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Talino.ai</strong> is the agentic platform brand of <strong>Talino Fintech Foundry</strong>, a trading name of <strong>Talino Ventures PBC</strong>, a Delaware-incorporated Public Benefit Corporation (CIK 0001885454).</p>
+      <p style="margin-top:8px"><strong>Talino Ventures PBC</strong> and <strong>Talino Digital Solutions Inc.</strong> are related companies under common ownership and/or control. All regulated money transmission services are provided pursuant to the applicable licenses held by <strong>Talino Digital Solutions Inc.</strong></p>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Talino Ventures PBC. All rights reserved.</span><span class="mono" style="color:#48626c">status: all rails operational ●</span></div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
