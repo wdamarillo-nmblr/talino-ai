@@ -18,9 +18,12 @@ home.html, brand.css  Reference scrape of the current site (delete before deploy
 ```
 
 ## Brand lineage
-- Palette: deep teal `#003C4B`, navy `#20355A`, `#24719F`, off-white `#FAFAFA` — lifted from the Webflow CSS.
-- Type: Mulish body (original), Tiempos → **Fraunces** (open-license serif analogue), **+ JetBrains Mono** for the agent/terminal flair.
-- AI flair: `#00B6DE` cyan accent, live terminal cards, animated dual-rail SVG, pulse/typewriter micro-animations, `prefers-reduced-motion` respected.
+- Palette (brand kit): woven-link greens `#1E7A3A`/`#44A147`/`#98BF55` on brand near-black `#14141F`, off-white `#FAFAFA` sections.
+- Logo: original woven-knot mark modernized as an interlocking chrome × green chain-link SVG (`assets/img/mark*.svg`) — the weave literally encodes the AI × stablecoin intersection.
+- Type: Mulish body + Plus Jakarta Sans logo word, Fraunces serif headlines (Tiempos analogue), JetBrains Mono for agent surfaces.
+- Real Talino Ventures imagery wired in: hero connection video, world-network video, bank/startup/embedded screenshots from the Webflow CDN.
+- Signature section: 'The Intersection' — AI × Stablecoins venn + 6-cell matrix (index.html#intersection).
+- AI flair: live terminal cards, animated dual-rail SVG, pulse/typewriter micro-animations, `prefers-reduced-motion` respected.
 
 ## Preview locally
 ```
